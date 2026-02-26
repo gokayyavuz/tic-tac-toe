@@ -1,10 +1,13 @@
+const App = {
+  // All of our selected HTML elements
+  menu: document.querySelector(".menu"),
+  menuItems: document.querySelectorAll(".items"),
 
-
-const menu = document.querySelector(".menu");
-const menuItems = menu.querySelectorAll(".items");
-
-menu.addEventListener("click", () => {
-    menuItems.forEach((items) => {
-        items.classList.toggle("hidden")
-    })
-});
+  init() {
+    App.$.menu.addEventListener("click", () => {
+      App.$.menuItems.forEach((items) => {
+        items.classList.toggle("hidden");
+      });
+    });
+  },
+};
